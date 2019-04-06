@@ -18,6 +18,7 @@
                 <outlet property="cropMenuButton" destination="UbG-RA-D49" id="2JF-0j-xJ7"/>
                 <outlet property="doneButton" destination="l4B-6K-1aJ" id="GnP-JE-dyb"/>
                 <outlet property="filterMenuButton" destination="iga-x3-Nbo" id="Ip3-dv-26C"/>
+                <outlet property="markButton" destination="q7u-1w-9js" id="2Gz-RN-Wbq"/>
                 <outlet property="subMenuContainer" destination="zaG-6j-m4a" id="TQ4-6L-50g"/>
                 <outlet property="topMenuContainter" destination="zK2-M3-1gG" id="EDK-Wb-kUJ"/>
                 <outlet property="topMenuTopConstraint" destination="nrk-UD-TWk" id="HLi-5J-ZoW"/>
@@ -164,7 +165,7 @@
                                         <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </state>
                                     <connections>
-                                        <action selector="onTapOpenFilter:" destination="-1" eventType="touchUpInside" id="U8p-og-0zA"/>
+                                        <action selector="onTapOpenMark:" destination="-1" eventType="touchUpInside" id="TWA-CT-MPp"/>
                                     </connections>
                                 </button>
                             </subviews>
