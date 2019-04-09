@@ -36,6 +36,7 @@ public class FMImageEditorViewController: UIViewController, UIViewControllerTran
     @IBOutlet weak var cancelButton: UIButton!
     @IBOutlet weak var doneButton: UIButton!
     @IBOutlet weak var markButton: UIButton!
+    @IBOutlet var markMenuView: FMMarkMenuView!
     
     @IBOutlet weak var unsafeAreaBottomViewHeightConstraint: NSLayoutConstraint!
     @IBOutlet weak var unsafeAreaBottomView: UIView!
@@ -86,12 +87,6 @@ public class FMImageEditorViewController: UIViewController, UIViewControllerTran
             }
         }
         return cropSubMenuView
-    }()
-    
-    lazy private var markMenuView: FMMarkMenuView = {
-        let markMenuView = FMMarkMenuView(frame: .zero)
-        markMenuView.isHidden = true
-        return markMenuView
     }()
     
     private var cropView: FMCropView!

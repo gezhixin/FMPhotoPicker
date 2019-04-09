@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.30.1" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.19.1"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -19,6 +19,7 @@
                 <outlet property="doneButton" destination="l4B-6K-1aJ" id="GnP-JE-dyb"/>
                 <outlet property="filterMenuButton" destination="iga-x3-Nbo" id="Ip3-dv-26C"/>
                 <outlet property="markButton" destination="q7u-1w-9js" id="2Gz-RN-Wbq"/>
+                <outlet property="markMenuView" destination="CEW-AV-X1C" id="pqx-jA-l8q"/>
                 <outlet property="subMenuContainer" destination="zaG-6j-m4a" id="TQ4-6L-50g"/>
                 <outlet property="topMenuContainter" destination="zK2-M3-1gG" id="EDK-Wb-kUJ"/>
                 <outlet property="topMenuTopConstraint" destination="nrk-UD-TWk" id="HLi-5J-ZoW"/>
@@ -256,11 +257,66 @@
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <point key="canvasLocation" x="34.399999999999999" y="52.623688155922046"/>
         </view>
+        <view contentMode="scaleToFill" id="CEW-AV-X1C" customClass="FMMarkMenuView" customModule="FMPhotoPicker" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="79"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q9j-Bu-tK9">
+                    <rect key="frame" x="0.0" y="5" width="52" height="69"/>
+                    <constraints>
+                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="52" id="tzN-Fc-nrh"/>
+                        <constraint firstAttribute="width" constant="52" id="vb2-ao-SVH"/>
+                        <constraint firstAttribute="height" constant="69" id="wGt-EG-4fc"/>
+                    </constraints>
+                    <state key="normal" image="icon_pencil">
+                        <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SYK-TZ-mDx">
+                    <rect key="frame" x="52" y="5" width="52" height="69"/>
+                    <state key="normal" image="icon_watercolor_pen"/>
+                </button>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="OKk-vv-vaX">
+                    <rect key="frame" x="109" y="16.5" width="200" height="46"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="200" id="T64-2D-5HZ"/>
+                        <constraint firstAttribute="height" constant="46" id="uIX-lQ-nvn"/>
+                    </constraints>
+                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="f4g-CV-d1N">
+                        <size key="itemSize" width="50" height="50"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    </collectionViewFlowLayout>
+                </collectionView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="SYK-TZ-mDx" firstAttribute="width" secondItem="Q9j-Bu-tK9" secondAttribute="width" id="1h9-kB-mmc"/>
+                <constraint firstItem="SYK-TZ-mDx" firstAttribute="height" secondItem="Q9j-Bu-tK9" secondAttribute="height" id="3To-GC-cpe"/>
+                <constraint firstItem="Q9j-Bu-tK9" firstAttribute="top" secondItem="Y0c-zY-aQz" secondAttribute="top" constant="5" id="8bZ-XC-ejm"/>
+                <constraint firstItem="SYK-TZ-mDx" firstAttribute="centerY" secondItem="Q9j-Bu-tK9" secondAttribute="centerY" id="O6H-V3-xEd"/>
+                <constraint firstItem="SYK-TZ-mDx" firstAttribute="leading" secondItem="Q9j-Bu-tK9" secondAttribute="trailing" id="OSy-Sr-rPZ"/>
+                <constraint firstItem="OKk-vv-vaX" firstAttribute="leading" secondItem="SYK-TZ-mDx" secondAttribute="trailing" constant="5" id="Oun-o5-OcM"/>
+                <constraint firstItem="OKk-vv-vaX" firstAttribute="centerY" secondItem="CEW-AV-X1C" secondAttribute="centerY" id="QSN-pF-03k"/>
+                <constraint firstItem="Q9j-Bu-tK9" firstAttribute="leading" secondItem="Y0c-zY-aQz" secondAttribute="leading" id="tPR-go-ngf"/>
+                <constraint firstItem="Y0c-zY-aQz" firstAttribute="bottom" secondItem="Q9j-Bu-tK9" secondAttribute="bottom" constant="5" id="wsn-Mx-IVJ"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="Y0c-zY-aQz"/>
+            <connections>
+                <outlet property="penButton" destination="Q9j-Bu-tK9" id="zdu-vg-kjG"/>
+            </connections>
+            <point key="canvasLocation" x="34.399999999999999" y="-320.68965517241384"/>
+        </view>
     </objects>
     <resources>
         <image name="icon_back" width="24" height="24"/>
         <image name="icon_crop" width="24" height="24"/>
         <image name="icon_filter" width="24" height="24"/>
         <image name="icon_mark" width="24" height="24"/>
+        <image name="icon_pencil" width="21.333333969116211" height="21.333333969116211"/>
+        <image name="icon_watercolor_pen" width="21.333333969116211" height="21.333333969116211"/>
     </resources>
 </document>
