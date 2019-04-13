@@ -257,15 +257,15 @@
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <point key="canvasLocation" x="34.399999999999999" y="52.623688155922046"/>
         </view>
-        <view contentMode="scaleToFill" id="CEW-AV-X1C" customClass="FMMarkMenuView" customModule="FMPhotoPicker" customModuleProvider="target">
+        <view hidden="YES" contentMode="scaleToFill" id="CEW-AV-X1C" customClass="FMMarkMenuView" customModule="FMPhotoPicker" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="375" height="79"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q9j-Bu-tK9">
-                    <rect key="frame" x="0.0" y="5" width="52" height="69"/>
+                    <rect key="frame" x="0.0" y="5" width="40" height="69"/>
                     <constraints>
-                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="52" id="tzN-Fc-nrh"/>
-                        <constraint firstAttribute="width" constant="52" id="vb2-ao-SVH"/>
+                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="40" id="tzN-Fc-nrh"/>
+                        <constraint firstAttribute="width" constant="40" id="vb2-ao-SVH"/>
                         <constraint firstAttribute="height" constant="69" id="wGt-EG-4fc"/>
                     </constraints>
                     <state key="normal" image="icon_pencil">
@@ -273,11 +273,11 @@
                     </state>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SYK-TZ-mDx">
-                    <rect key="frame" x="52" y="5" width="52" height="69"/>
+                    <rect key="frame" x="40" y="5" width="40" height="69"/>
                     <state key="normal" image="icon_watercolor_pen"/>
                 </button>
                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="OKk-vv-vaX">
-                    <rect key="frame" x="109" y="16.5" width="200" height="46"/>
+                    <rect key="frame" x="85" y="16.5" width="200" height="46"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="200" id="T64-2D-5HZ"/>

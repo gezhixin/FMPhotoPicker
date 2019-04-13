@@ -8,7 +8,7 @@
 import UIKit
 
 
-class FMLineMark: NSObject {
+class FMLineMark: FMImageMark {
     
     enum FMLineMarkType: Int {
         case pencil

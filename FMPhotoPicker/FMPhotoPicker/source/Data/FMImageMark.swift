@@ -9,5 +9,4 @@ import UIKit
 
 class FMImageMark: NSObject {
     var point: CGPoint! = CGPoint.zero
-    
 }

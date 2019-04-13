@@ -18,6 +18,8 @@ class FMCropForegroundView: UIView {
     }
     
     public var eclipsePreviewEnabled = false
+    
+    public var isFilter = false
 
     override var frame: CGRect {
         didSet {
